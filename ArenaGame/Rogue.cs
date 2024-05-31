@@ -20,15 +20,15 @@ namespace ArenaGame
         public override int Attack()
         {
             int attack = base.Attack();
-            if (attack % 25 == TripleDamageMagicLastDigit)
-            {
-                attack = attack * 3;
-            }
-            attackCount = attackCount + 1;
-            if (attackCount % HealEachNthRound == 0 && ThrowDice (25))
-            {
-                Heal(StartingHealth * 50 / 100);
-            }
+            //if (attack % 25 == TripleDamageMagicLastDigit)
+            //{
+            //    attack = attack * 3;
+            //}
+            //attackCount = attackCount + 1;
+            //if (attackCount % HealEachNthRound == 0 && ThrowDice (25))
+            //{
+            //    Heal(StartingHealth * 50 / 100);
+            //}
             return attack;
         }
 
