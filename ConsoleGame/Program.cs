@@ -24,6 +24,7 @@ namespace ConsoleGame
         }
         static void Main(string[] args)
         {
+            
             Console.Write("Enter number of battles:");
             int rounds = Int32.Parse(Console.ReadLine());
 
@@ -60,6 +61,9 @@ namespace ConsoleGame
             for (int i = 0; i < 3; i++)
             {
                 Play(heroes[rndm.Next(0, heroes.Count)], heroes[rndm.Next(0, heroes.Count)], rounds);
+                Console.WriteLine("\nPress any key to start another fight...");
+                Console.ReadKey();
+                Console.WriteLine("\n\n");
             }
 
             //for (int i = 0; i < rounds; i++)
@@ -91,13 +95,6 @@ namespace ConsoleGame
             //Console.WriteLine();
             //Console.WriteLine($"One has {oneWins} wins.");
             //Console.WriteLine($"Two has {twoWins} wins.");
-        }
-
-        private static void AnnounceNextFight()
-        {
-            Console.WriteLine("\nPress any key to start another fight...");
-            Console.ReadKey();
-            Console.Clear();
         }
     }
 }
